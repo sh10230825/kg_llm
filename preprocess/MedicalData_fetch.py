@@ -118,10 +118,6 @@ if not df_references.empty:
 # delete null rows
 merged_data = merged_data.dropna(how="all", subset=merged_data.columns.difference(["ID"]))
 
-# output to CSV
-output_file_csv = os.path.join(output_dir, "medical_dataset.csv")
-merged_data.to_csv(output_file_csv, index=False)
-
 # output to JSON
 output_file_json = os.path.join(output_dir, "medical_dataset.json")
 merged_data.to_json(output_file_json, orient="records", force_ascii=False, indent=4)
