@@ -122,4 +122,4 @@ merged_data = merged_data.dropna(how="all", subset=merged_data.columns.differenc
 output_file_json = os.path.join(output_dir, "medical_dataset.json")
 merged_data.to_json(output_file_json, orient="records", force_ascii=False, indent=4)
 
-print(f"Fetch completed, output file CSV: {output_file_csv} and JSON: {output_file_json}")
+print(f"Fetch completed, output file : {output_file_json}")
