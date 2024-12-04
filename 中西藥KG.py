@@ -25,7 +25,7 @@ embedding_provider = OllamaEmbeddings(model="llama3.1")
 # 連接 Neo4j 資料庫
 neo4j_url = 'bolt://localhost:7687'
 neo4j_username = 'neo4j'
-neo4j_password = 'stockinfo'
+neo4j_password = 'KnowledgeGraph_llm'
 
 driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password))
 
