@@ -47,7 +47,7 @@ def add_interaction_to_graph(tx, properties):
 
 # %% load and preprocess
 # load .json dataset
-data_path = os.path.join("dataset", "medical_dataset.json")
+data_path = os.path.join("dataset", "ds_medical.json")
 data = pd.read_json(data_path)
 
 # preprocessing
@@ -110,7 +110,7 @@ with driver.session() as session:
       }
     }
     """)
-    
+
     # Create FULLTEXT INDEX
     session.run("""
     CREATE FULLTEXT INDEX MedicineInteractionFulltextIndex IF NOT EXISTS

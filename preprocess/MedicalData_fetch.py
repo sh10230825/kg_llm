@@ -119,7 +119,7 @@ if not df_references.empty:
 merged_data = merged_data.dropna(how="all", subset=merged_data.columns.difference(["ID"]))
 
 # output to JSON
-output_file_json = os.path.join(output_dir, "medical_dataset.json")
+output_file_json = os.path.join(output_dir, "ds_medical.json")
 merged_data.to_json(output_file_json, orient="records", force_ascii=False, indent=4)
 
 print(f"Fetch completed, output file : {output_file_json}")
