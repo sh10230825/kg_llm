@@ -110,6 +110,13 @@ with driver.session() as session:
       }
     }
     """)
+    
+    # Create FULLTEXT INDEX
+    session.run("""
+    CREATE FULLTEXT INDEX MedicineInteractionFulltextIndex IF NOT EXISTS
+    FOR (i:interaction)
+    ON EACH [i.text]
+    """)
 
 # close the Neo4j driver
 driver.close()
